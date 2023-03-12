@@ -7,9 +7,7 @@
   border: 0;
 }
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
@@ -76,7 +74,6 @@ img {
 /* ============ Memes Wrapper Styles ================ */
 
 .mem__wrapper {
-  position: relative;
   overflow: hidden;
   cursor: url("icons/cur.png"), auto;
   border-top: 2px solid #4db6ac;
@@ -90,7 +87,6 @@ img {
 
 .mem__label {
   padding: 1.25rem 0;
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
