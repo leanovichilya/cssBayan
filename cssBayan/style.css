@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 /* ============ Default Styles ================ */
-:root{
-  font-size: 16px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +11,10 @@
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -164,4 +164,31 @@ img {
 .mem__checkbox:checked + .text__wrapper .text__icon,
 .mem__checkbox:not(:checked):hover + .text__wrapper .text__icon {
   transform: rotate(45deg);
+}
+
+/* ============ Media Queries Styles ================ */
+
+@media screen and (max-width: 821px){
+  html{
+    font-size: 12px;
+  }
+
+  .container {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .mem__image {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 421px){
+  html{
+    font-size: 10px;
+  }
+
+  .mem__image {
+    max-width: 100%;
+  }
 }
