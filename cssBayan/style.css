@@ -43,6 +43,7 @@ ul li {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
   vertical-align: top;
@@ -75,6 +76,8 @@ img {
 .mem__wrapper {
   position: relative;
   padding: 20px 0;
+  overflow: hidden;
+  cursor: url("icons/cur.png"), auto;
 }
 
 .mem__wrapper:before {
@@ -100,11 +103,7 @@ img {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 700;
-  cursor: url("icons/cur.png"), auto;
-}
-
-.mem__label:active{
-  cursor: url("icons/cur-active.png"), auto;
+  cursor: inherit;
 }
 
 .mem__text {
@@ -127,15 +126,22 @@ img {
 }
 
 .mem__image {
-  transform: scale(0);
   width: 0;
-  height: 0;
   align-self: center;
-  max-width: 400px;
-  transition: transform 0.3s, width 1s, height 0.3s;
+  max-width: 350px;
+  transform: scale(0);
+  transition: transform 0.5s, width 1s;
 }
 
 /* ============ Memes Effects Styles ================ */
+.mem__label:active{
+  cursor: inherit;
+}
+
+.mem__wrapper:active{
+  cursor: url("icons/cur-active.png"), auto;
+}
+
 .container:hover {
   color: #004d40;
 }
@@ -149,13 +155,12 @@ img {
 }
 
 .mem__checkbox:checked ~ .mem__image,
-.mem__checkbox:not(:checked):hover ~ .mem__image {
+.mem__wrapper:hover .mem__image {
   margin-top: 30px;
   margin-bottom: 30px;
   width: 100%;
   height: auto;
   transform: scale(100%);
-  transition: transform 1s;
 }
 
 .mem__checkbox:checked + .mem__text:after,
