@@ -89,7 +89,8 @@ img {
   cursor: pointer;
 }
 
-.mem__label::after {
+
+.mem__text::after {
   content: '';
   position: absolute;
   width: 20px;
@@ -101,6 +102,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mem__image {
@@ -108,22 +111,26 @@ img {
   width: 0;
   height: 0;
   align-self: center;
-  max-width: 500px;
+  max-width: 400px;
+  transition: transform 0.3s, width 1s, height 0.3s;
 }
 
 /* ============ Memes Effects Styles ================ */
 
-.mem__checkbox:checked ~ .mem__image{
-  width: 100%;
-  height: auto;
-  transform: scale(100%);
-  transition: transform 1s ease;
+.container:hover .mem__text:after {
+  opacity: 1;
 }
 
+.mem__checkbox:checked ~ .mem__image,
 .mem__checkbox:not(:checked):hover ~ .mem__image {
+  margin-top: 30px;
   width: 100%;
   height: auto;
   transform: scale(100%);
-  transition: transform 1s ease;
+  transition: transform 1s;
 }
 
+.mem__checkbox:checked + .mem__text:after,
+.mem__checkbox:not(:checked):hover + .mem__text:after {
+  transform: rotate(45deg);
+}
