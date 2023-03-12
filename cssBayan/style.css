@@ -77,7 +77,7 @@ img {
   padding: 20px 0;
 }
 
-.mem__wrapper:before{
+.mem__wrapper:before {
   content: '';
   position: absolute;
   right: 0;
@@ -100,10 +100,10 @@ img {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 700;
-  cursor: pointer;
+  cursor: url("icons/cursor.png"), auto;
 }
 
-.mem__text{
+.mem__text {
   transition: color 0.3s ease;
 }
 
@@ -132,7 +132,7 @@ img {
 }
 
 /* ============ Memes Effects Styles ================ */
-.container:hover{
+.container:hover {
   color: #004d40;
 }
 
@@ -140,7 +140,7 @@ img {
   opacity: 1;
 }
 
-.mem__checkbox:checked + .mem__text{
+.mem__checkbox:checked + .mem__text {
   color: #004d40;
 }
 
