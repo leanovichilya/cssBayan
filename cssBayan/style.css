@@ -100,7 +100,11 @@ img {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 700;
-  cursor: url("icons/cursor.png"), auto;
+  cursor: url("icons/cur.png"), auto;
+}
+
+.mem__label:active{
+  cursor: url("icons/cur-active.png"), auto;
 }
 
 .mem__text {
