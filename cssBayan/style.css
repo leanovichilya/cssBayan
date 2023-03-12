@@ -111,3 +111,19 @@ img {
   max-width: 500px;
 }
 
+/* ============ Memes Effects Styles ================ */
+
+.mem__checkbox:checked ~ .mem__image{
+  width: 100%;
+  height: auto;
+  transform: scale(100%);
+  transition: transform 1s ease;
+}
+
+.mem__checkbox:not(:checked):hover ~ .mem__image {
+  width: 100%;
+  height: auto;
+  transform: scale(100%);
+  transition: transform 1s ease;
+}
+
