@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* ============ Default Styles ================ */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/* ============ Container Styles ================ */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ============ Header Styles ================ */
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* ============ Memes Wrapper Styles ================ */
+
+.mem__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.mem__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mem__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 10px 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mem__label::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  background-image: url('./icons/plus.svg');
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.mem__image {
+  transform: scale(0);
+  width: 0;
+  height: 0;
+  align-self: center;
+  max-width: 500px;
+}
+
