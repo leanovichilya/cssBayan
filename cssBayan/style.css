@@ -136,20 +136,11 @@ img {
   cursor: url("icons/cur-active.png"), auto;
 }
 
-.container:hover {
-  color: #004d40;
-}
-
-.container:hover .text__icon {
-  opacity: 1;
-}
-
 .mem__checkbox:checked + .text__wrapper .mem__text {
   color: #004d40;
 }
 
-.mem__checkbox:checked ~ .mem__image,
-.mem__wrapper:hover .mem__image {
+.mem__checkbox:checked ~ .mem__image {
   margin-top: 1.8rem;
   margin-bottom: 1.8rem;
   width: 100%;
@@ -163,9 +154,26 @@ img {
 }
 
 /* ============ Media Queries Styles ================ */
+@media (hover: hover) {
+  .container:hover {
+    color: #004d40;
+  }
 
-@media screen and (max-width: 821px){
-  html{
+  .container:hover .text__icon {
+    opacity: 1;
+  }
+
+  .mem__wrapper:hover .mem__image {
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    width: 100%;
+    height: auto;
+    transform: scale(100%);
+  }
+}
+
+@media screen and (max-width: 821px) {
+  html {
     font-size: 12px;
   }
 
@@ -179,8 +187,8 @@ img {
   }
 }
 
-@media screen and (max-width: 421px){
-  html{
+@media screen and (max-width: 421px) {
+  html {
     font-size: 10px;
   }
 
